@@ -80,8 +80,8 @@ public class Abhibus extends Base {
 	layout.click();
 	WebElement seat1=driver.findElement(By.id("O5-7ZZ"));
 	seat1.click();
-	//WebElement seat2=driver.findElement(By.id("O4-7ZZ"));
-	//seat2.click();
+	WebElement seat2=driver.findElement(By.id("O4-7ZZ"));
+	seat2.click();
 	WebElement payment=driver.findElement(By.id("btnEnable1"));
 	payment.click();
 	WebElement phonenumber=driver.findElement(By.id("mobileNumber"));
@@ -99,16 +99,16 @@ public class Abhibus extends Base {
 	WebElement age1=driver.findElement(By.id("adultage0"));
 	age1.sendKeys("28");
 	Thread.sleep(2000);
-	//WebElement name2=driver.findElement(By.id("adultname1"));
-	//name2.sendKeys("pallavi");
-	//Thread.sleep(2000);
-	//WebElement age2=driver.findElement(By.id("adultage1"));
-	//age2.sendKeys("25");
-	//Thread.sleep(2000);
+	WebElement name2=driver.findElement(By.id("adultname1"));
+	name2.sendKeys("pallavi");
+	Thread.sleep(2000);
+	WebElement age2=driver.findElement(By.id("adultage1"));
+	age2.sendKeys("25");
+	Thread.sleep(2000);
 	WebElement paynow=driver.findElement(By.id("paynow"));
 	paynow.click();
 	Thread.sleep(2000);
-	
+	driver.close();
  }
  
 }
