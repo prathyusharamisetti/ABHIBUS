@@ -18,7 +18,24 @@ import resources.Base;
 
 public class Abhibus extends Base {
 	WebDriver driver;
- @Test
+	@Test
+	public void userlogin() throws InterruptedException {
+		driver=intializedriver();
+		driver.get("https://www.abhibus.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		WebElement login=driver.findElement(By.id("AccLogin"));
+		login.click();
+		WebElement Mobilenumber=driver.findElement(By.id("mobileNo"));
+		Mobilenumber.sendKeys("9000080000");
+		WebElement otp=driver.findElement(By.id("getotp"));
+		otp.click();
+		driver.close();
+	}
+}
+	
+	
+ /*@Test
 	public void loginpage() throws InterruptedException, IOException {
 	 driver=intializedriver();
 	 driver.get("https://www.abhibus.com/");
@@ -63,7 +80,7 @@ public class Abhibus extends Base {
       //Boardingpoint.sendKeys(Keys.ARROW_DOWN);
              WebElement Droppingpoint=driver.findElement(By.id("drop_id"));
        /*Droppingpoint.sendKeys(Keys.ARROW_DOWN);
-       Droppingpoint.sendKeys(Keys.ARROW_DOWN);*/
+       Droppingpoint.sendKeys(Keys.ARROW_DOWN);
              Select select2=new Select(Droppingpoint);
              select2.selectByVisibleText("Lakdikapool-hyd-06:50");   
              WebElement Generalpublic=driver.findElement(By.xpath("//option[text()='GENERAL PUBLIC']"));
@@ -100,4 +117,4 @@ public class Abhibus extends Base {
 	       driver.close();
  }
  
-}
+}*/
