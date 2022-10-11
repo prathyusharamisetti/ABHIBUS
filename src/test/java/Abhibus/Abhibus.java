@@ -19,7 +19,7 @@ import resources.Base;
 public class Abhibus extends Base {
 	WebDriver driver;
 	@Test
-	public void userlogin() throws InterruptedException {
+	public void login() throws InterruptedException {
 		driver=intializedriver();
 		driver.get("https://www.abhibus.com/");
 		driver.manage().window().maximize();
@@ -31,12 +31,10 @@ public class Abhibus extends Base {
 		WebElement otp=driver.findElement(By.id("getotp"));
 		otp.click();
 		driver.close();
+	
 	}
-}
-	
-	
- /*@Test
-	public void loginpage() throws InterruptedException, IOException {
+ @Test
+	public void user() throws InterruptedException, IOException {
 	 driver=intializedriver();
 	 driver.get("https://www.abhibus.com/");
 	 driver.manage().window().maximize();
@@ -77,10 +75,7 @@ public class Abhibus extends Base {
             WebElement Boardingpoint=driver.findElement(By.id("pickup_id"));
             Select select1=new Select(Boardingpoint);
             select1.selectByVisibleText("Nidadavolu-19:00");
-      //Boardingpoint.sendKeys(Keys.ARROW_DOWN);
              WebElement Droppingpoint=driver.findElement(By.id("drop_id"));
-       /*Droppingpoint.sendKeys(Keys.ARROW_DOWN);
-       Droppingpoint.sendKeys(Keys.ARROW_DOWN);
              Select select2=new Select(Droppingpoint);
              select2.selectByVisibleText("Lakdikapool-hyd-06:50");   
              WebElement Generalpublic=driver.findElement(By.xpath("//option[text()='GENERAL PUBLIC']"));
@@ -116,5 +111,4 @@ public class Abhibus extends Base {
 	        paynow.click();
 	       driver.close();
  }
- 
-}*/
+}

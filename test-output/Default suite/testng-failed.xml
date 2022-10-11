@@ -5,7 +5,7 @@
     <classes>
       <class name="Abhibus.Abhibus">
         <methods>
-          <include name="loginpage"/>
+          <include name="user"/>
         </methods>
       </class> <!-- Abhibus.Abhibus -->
     </classes>
