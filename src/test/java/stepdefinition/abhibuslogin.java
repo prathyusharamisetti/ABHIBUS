@@ -38,7 +38,8 @@ public class abhibuslogin extends Base{
 		WebElement otp=driver.findElement(By.id("getotp"));
 		otp.click();
 		driver.close();
-	}
+		System.out.print("This is cucumber project");
+		}
 //Scenario: user should be able to search the bus and select the seat.
 	
 	@Given("I should visit the website.")
