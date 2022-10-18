@@ -1,7 +1,12 @@
 package stepdefinition;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -50,7 +55,13 @@ public class abhibuslogin extends Base{
 		 Thread.sleep(2000);
 	  
 	}
-
+	 @Then("I should take the screenshot of login page.")
+	    public void I_should_take_the_screenshot_of_login_page() throws Throwable {
+		  File Homepage = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	      FileUtils.copyFile(Homepage, new File("files//screenshot1.png"));
+	 }
+	        
+	        
 	@Then("i should enter source and destination.")
 	public void i_should_enter_source_and_destination() throws InterruptedException {
 		WebElement Leavingfrom=driver.findElement(By.id("source"));
@@ -114,7 +125,12 @@ public class abhibuslogin extends Base{
 		WebElement layout=driver.findElement(By.id("btnEnable11"));
         layout.click();   
 	}
-
+	   @Then("I should take the screenshot of end page.")
+	    public void I_should_take_the_screenshot_of_end_page() throws Throwable {
+		   File Endpage = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	         FileUtils.copyFile(Endpage, new File("files//screenshot2.png"));
+		   
+	   }
 	@Then("I can select the seat.")
 	public void i_can_select_the_seat() {
 		 WebElement seat1=driver.findElement(By.id("O5-7ZZ"));

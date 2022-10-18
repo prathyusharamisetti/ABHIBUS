@@ -8,6 +8,7 @@ And I should click on login/signup with otp button.
 
 Scenario: user should be able to search the bus and select the seat.
 Given I should visit the website.
+Then I should take the screenshot of login page.
 Then i should enter source and destination.
 Then I should select the Date of Journey. 
 And then click on Search button.
@@ -15,6 +16,7 @@ Then I should select the bus by clicking on drop down.
 Then I should click on select Seat.
 Then I should select the boarding point and dropping point.
 And I should click on Showlayout.
+Then I should take the screenshot of end page.
 Then I can select the seat.
 Then I should click on Continue to payment.
 Then I should enter the mobile number.
